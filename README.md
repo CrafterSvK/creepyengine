@@ -1,2 +1,6 @@
 # creepyengine
-Simple Text-based game engine 
+Advanced text-game engine.
+
+Currently developing:
+CrafterSvK - Python, XML
+Impius - Python, XML, Graphics

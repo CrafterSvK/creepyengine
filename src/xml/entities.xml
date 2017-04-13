@@ -1,0 +1,33 @@
+<!--
+entities.xml
+List of entities that you can interact with in world.
+
+Legend:
+"name" - Name of entity
+"name-plural" - Name of entity in plural (just in case)
+"region" - Region that entity can be in [Direct connection with "region-type" in world.xml]
+"type" - Type of entity (usually refers to property of entity)
+"special" - Just in case it would be needed (not use yet)
+
+-->
+
+<entities>
+    <entity>
+        <name>Cactus</name>
+        <name-plural>Cacti</name-plural>
+        <region>desert</region>
+        <types>
+            <type>plant</type>
+            <type>spiky</type>
+        </types>
+    </entity>
+    <entity>
+        <name>Wolf</name>
+        <name-plural>Wolves</name-plural>
+        <region>plain</region>
+        <types>
+            <type>animal</type>
+            <type>hostile</type>
+        </types>
+    </entity>
+</entities>

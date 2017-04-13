@@ -1,0 +1,30 @@
+<!--
+world.xml
+List of world biomes that are in the world
+
+Legend:
+"id" - Id of biome [Refers to random world generator]
+"name" - Name of biome
+"region-type" - Type of region [Directly refers to "region" tag in entities]
+"type" - Type of biome (usually refers to property of that biome)
+
+-->
+<biomes>
+    <biome>
+        <name>Plains</name>
+        <id>1</id>
+        <region-type>plains</region-type>
+        <types>
+            <type>mild</type>
+            <type>bottom-water</type>
+        </types>
+    </biome>
+    <biome>
+        <name>Desert</name>
+        <id>2</id>
+        <region-type>desert</region-type>
+        <types>
+            <type>hot</type>
+        </types>
+    </biome>
+</biomes>

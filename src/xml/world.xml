@@ -14,26 +14,26 @@ Legend:
         <name>Plains</name>
         <id>1</id>
         <region-type>plains</region-type>
-        <types>
-            <type>mild</type>
-            <type>bottom-water</type>
-        </types>
+        <type>mild</type>
+        <type>bottom-water</type>
     </biome>
     <biome>
         <name>Desert</name>
         <id>2</id>
         <region-type>desert</region-type>
-        <types>
-            <type>hot</type>
-        </types>
+        <type>hot</type>
     </biome>
     <biome>
         <name>Mountains</name>
         <id>3</id>
-        <region-type>mountain</region-type>
-        <types>
-            <type>colder</type>
-            <type>windy</type>
-        </types>
+        <region-type>mountains</region-type>
+        <type>colder</type>
+        <type>windy</type>
+    </biome>
+    <biome>
+        <name>Tundra</name>
+        <id>4</id>
+        <region-type>tundra</region-type>
+        <type>cold</type>
     </biome>
 </biomes>

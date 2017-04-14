@@ -16,18 +16,38 @@ Legend:
         <name>Cactus</name>
         <name-plural>Cacti</name-plural>
         <region>desert</region>
-        <types>
-            <type>plant</type>
-            <type>spiky</type>
-        </types>
+        <type>plant</type>
+        <type>spiky</type>
+    </entity>
+    <entity>
+        <name>Birch tree</name>
+        <name-plural>Birch trees</name-plural>
+        <region>plains</region>
+        <type>tree</type>
+        <type>birch</type>
+    </entity>
+    <entity>
+        <name>Oak tree</name>
+        <name-plural>Oak trees</name-plural>
+        <region>tundra</region>
+        <type>tree</type>
+        <type>oak</type>
+    </entity>
+    <entity>
+        <name>Rock</name>
+        <name-plural>Rocks</name-plural>
+        <region>desert</region>
+        <region>plains</region>
+        <region>mountains</region>
+        <region>tundra</region>
+        <type>rock</type>
     </entity>
     <entity>
         <name>Wolf</name>
         <name-plural>Wolves</name-plural>
-        <region>plain</region>
-        <types>
-            <type>animal</type>
-            <type>hostile</type>
-        </types>
+        <region>plains</region>
+        <region>tundra</region>
+        <type>animal</type>
+        <type>hostile</type>
     </entity>
 </entities>

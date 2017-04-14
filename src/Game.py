@@ -6,7 +6,7 @@ class Main:
     def game(self):
         world = World.World()
 
-        number_tries = 1
+        number_tries = 10
         tries = 0
         while number_tries > tries:
             x = randint(1, 1000)

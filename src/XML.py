@@ -26,10 +26,29 @@ class XML:
         xml_file_tree = etree.parse("xml/" + xml_file + ".xml")
         id_input = str(id_input)
         tag_id = xml_file_tree.xpath(".//id[text()='" + id_input + "']")
-        type_list_tag = tag_id[0].getparent().findall(tag_name)
-        type_list_str = []
+        search_list_tag = tag_id[0].getparent().findall(tag_name)
+        search_list_str = []
 
-        for i in type_list_tag:
-            type_list_str.append(i.text)
+        for i in search_list_tag:
+            search_list_str.append(i.text)
 
-        return type_list_str
+        return search_list_str
+
+    def get_list_by_region(self, region_type, xml_file, tag_name):
+        """
+        :param region_type: type of region that you want to search in
+        :param xml_file: name of xml file in which it will be found
+        :param tag_name: name of tag you want list of
+        :return: 
+        This seems messy. Check please.
+        """
+        xml_file_tree = etree.parse("xml/" + xml_file + ".xml")
+        region_type_tag = xml_file_tree.xpath(".//region[text()='" + region_type + "']")
+        search_list_str = []
+
+        for i in region_type_tag:
+            search_list_tag = i.getparent().findall(tag_name)
+            for e in search_list_tag:
+                search_list_str.append(e.text)
+
+        return search_list_str

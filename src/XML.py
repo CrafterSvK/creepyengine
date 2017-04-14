@@ -19,14 +19,15 @@ class XML:
         """
         input ID, XML file, tag_name
         outputs list with text of chosen tag_name
-        Sort of weird code. Think this needs rework
+        VERY VERY Weird code change please quickly
         """
         complete_tree = etree.parse("xml/" + xml_file + ".xml")
         tag_id = str(tag_id)
         tag_id_tree = complete_tree.xpath(".//id[text()='" + tag_id + "']")
         list_types = tag_id_tree[0].getparent().findall("type")
+        for e in list_types:
+            find_all = e.getparent().findall(tag_name)
         list_types_l = []
-        for i in list_types:
-            list_types_l.append(i.getparent().find(tag_name).text)
-            # Acting weird (Showing good number of times but bad results
+        for i in find_all:
+            list_types_l.append(i.text)
         return list_types_l

@@ -6,10 +6,10 @@ class World:
     xml = XML.XML()
 
     def generate_tile(self, x, y):
-        type_land = randint(1, 3)
-        type_land_s = self.xml.get_text_by_id(type_land, "world", "name")
-        list_type_xml = self.xml.get_list_by_id(type_land, "world", "type")
-        list_type = " & ".join(list_type_xml)
-        land = "On " + str(x) + ", " + str(y) + ". There is " + type_land_s + ". It is " + list_type + " in here!"
+        rand_land_gen = randint(1, 3)
+        land_name = self.xml.get_text_by_id(rand_land_gen, "world", "name")
+        land_type_list = self.xml.get_list_by_id(rand_land_gen, "world", "type")
+        land_type_str = " & ".join(land_type_list)
+        land = "On " + str(x) + ", " + str(y) + ". There is " + land_name + ". It is " + land_type_str + " in here!"
 
         return land

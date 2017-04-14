@@ -27,4 +27,13 @@ Legend:
             <type>hot</type>
         </types>
     </biome>
+    <biome>
+        <name>Mountains</name>
+        <id>3</id>
+        <region-type>mountain</region-type>
+        <types>
+            <type>colder</type>
+            <type>windy</type>
+        </types>
+    </biome>
 </biomes>

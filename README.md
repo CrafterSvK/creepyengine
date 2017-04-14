@@ -1,10 +1,7 @@
 # creepyengine
-Advanced text-game engine.
+Advanced text-based game engine. Using Python 3 nad XML (for storing information)
 
-Currently developing:
+## Developers
+CrafterSvK - *Python, XML*
 
-
-CrafterSvK - Python, XML
-
-
-Impius - Python, XML, Graphics
+Impius - *Python, XML*

@@ -1,39 +1,18 @@
 from random import randint
-import XML
+import World
 
 
-class World:
-    xml = XML.XML()
+class Main:
+    def game(self):
+        world = World.World()
 
-    def generate_tile(self, x, y):
-        type_land = randint(1, 3)
-        type_land_s = self.xml.get_tag_text_by_id(type_land, "world", "name")
-        return type_land_s
+        number_tries = 1
+        tries = 0
+        while number_tries > tries:
+            x = randint(1, 1000)
+            y = randint(1, 1000)
+            print(world.generate_tile(x, y))
+            tries = tries + 1
 
-    """
-    Kept for legacy reasons
-    
-        type_land = randint(1, 3)
-        number_entities = randint(1, 20)
-        active_entities = randint(1, number_entities)
-        passive_entities = number_entities - active_entities
-        land = [x, y, type_land, number_entities, passive_entities, active_entities]
-
-        if type_land == 1:
-            type_land_s = "desert"
-            active_entities_s = "cojots"
-            passive_entities_s = "cactuses"
-        elif type_land == 2:
-            type_land_s = "moutains"
-            active_entities_s = "birds"
-            passive_entities_s = "rocks"
-        elif type_land == 3:
-            type_land_s = "plain"
-            active_entities_s = "wolfs"
-            passive_entities_s = "trees"
-        else:
-            type_land_s = "void xD"
-
-        print("On", x, "x", y, "there's", type_land_s, "and", active_entities, active_entities_s, passive_entities, passive_entities_s, "!")
-        return land
-    """
+main = Main()
+main.game()

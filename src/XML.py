@@ -2,32 +2,34 @@ from lxml import etree
 
 
 class XML:
-    def get_text_by_id(self, tag_id, xml_file, tag_name):
+    def get_text_by_id(self, id_input, xml_file, tag_name):
         """
-        input ID, XML file, tag_name
-        outputs text of chosen tag_name
-        Sort of weird code. Think this needs rework
+        :param id_input: id of tag "id" in xml file you want to search in
+        :param xml_file: name of xml file in which it will be found
+        :param tag_name: name of a tag that will be output
+        :return: text of tag in parent where is id_input located
         """
-        complete_tree = etree.parse("xml/" + xml_file + ".xml")
-        tag_id = str(tag_id)
-        tag_id_tree = complete_tree.xpath(".//id[text()='" + tag_id + "']")
-        parent = tag_id_tree[0].getparent()
+        xml_file_tree = etree.parse("xml/" + xml_file + ".xml")
+        id_input = str(id_input)
+        tag_id = xml_file_tree.xpath(".//id[text()='" + id_input + "']")
+        tag_text = tag_id[0].getparent().find(tag_name).text
 
-        return parent.find(tag_name).text
+        return tag_text
 
-    def get_list_by_id(self, tag_id, xml_file, tag_name):
+    def get_list_by_id(self, id_input, xml_file, tag_name):
         """
-        input ID, XML file, tag_name
-        outputs list with text of chosen tag_name
-        VERY VERY Weird code change please quickly
+        :param id_input: id of tag "id" in xml file you want to search in
+        :param xml_file: name of xml file in which it will be found
+        :param tag_name: name of a tag that will be output 
+        :return: list of tags in parent where is id_input located
         """
-        complete_tree = etree.parse("xml/" + xml_file + ".xml")
-        tag_id = str(tag_id)
-        tag_id_tree = complete_tree.xpath(".//id[text()='" + tag_id + "']")
-        list_types = tag_id_tree[0].getparent().findall("type")
-        for e in list_types:
-            find_all = e.getparent().findall(tag_name)
-        list_types_l = []
-        for i in find_all:
-            list_types_l.append(i.text)
-        return list_types_l
+        xml_file_tree = etree.parse("xml/" + xml_file + ".xml")
+        id_input = str(id_input)
+        tag_id = xml_file_tree.xpath(".//id[text()='" + id_input + "']")
+        type_list_tag = tag_id[0].getparent().findall(tag_name)
+        type_list_str = []
+
+        for i in type_list_tag:
+            type_list_str.append(i.text)
+
+        return type_list_str

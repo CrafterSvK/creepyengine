@@ -17,4 +17,14 @@ Legend:
         <can-interact-with>plant</can-interact-with>
         <effect>fatigue</effect>
     </interaction>
+	<interaction>
+		<name>chop</name>
+		<tool>axe</tool>
+		<can-interact-with>plant</can-interact-with>
+		<can-interact-with>tree</can-interact-with>
+		<effect>fatigue</effect>
+		<effect>xp-add-chopping</effect>
+	</interaction>
 </interactions>
+
+
